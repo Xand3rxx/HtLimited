@@ -22,7 +22,7 @@ class SettingsSeeder extends Seeder
             'site_description'              => 'HT-Limited is Business Management Consulting firm, offering support in business development, human resources management and administration.',
             'website_url'                   => 'https://ht-limitedng.net',
             'email'                         => 'info@ht-limitedng.net',
-            'site_address'                  => '23, Hawley Street, Lagos Island, Lagos State, Nigeria',
+            'site_address'                  => '23, Hawley Street, Suite 3, Lagos Island, Lagos State, Nigeria.',
             'site_phone_number'             => '+2348137409030',
             'site_alternative_phone_number' => '+2348140913676',
             'site_working_hours'            => '8:00am to 5:00pm',

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Setting;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\URL;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 
@@ -47,10 +46,6 @@ class SettingsController extends Controller
 
         //Check if image was uploaded on update
         if ($image = $request->file('site_icon')) {
-            $siteIcon = 'favicon'.$image->getClientOriginalExtension();
-            $image->move(public_path('img/category'), $siteIcon);
-            $validated['site_icon'] = URL::to('/').'img/'.$siteIcon;
-
             //Delete old image
             $oldImage = substr($setting['site_icon'], strrpos($setting['site_icon'], '/' )+1);
 
@@ -58,15 +53,16 @@ class SettingsController extends Controller
             {
                 File::delete(public_path('img/'.$oldImage));
             }
+
+            $siteIcon = 'favicon.'.$image->getClientOriginalExtension();
+            $image->move(public_path('img/category'), $siteIcon);
+            $validated['site_icon'] = url('img/'.$siteIcon);
+
         }else{
             $validated['site_icon'] = $setting['site_icon'];
         }
 
         if ($image = $request->file('site_logo')) {
-            $siteLogo = 'logo'.$image->getClientOriginalExtension();
-            $image->move(public_path('img/'), $siteLogo);
-            $validated['site_logo'] = URL::to('/').'img/'.$siteLogo;
-
             //Delete old image
             $oldImage = substr($setting['site_logo'], strrpos($setting['site_logo'], '/' )+1);
 
@@ -74,12 +70,17 @@ class SettingsController extends Controller
             {
                 File::delete(public_path('img/'.$oldImage));
             }
+
+            $siteLogo = 'logo.'.$image->getClientOriginalExtension();
+            $image->move(public_path('img/'), $siteLogo);
+            $validated['site_logo'] = url('img/'.$siteLogo);
+
         }else{
             $validated['site_logo'] = $setting['site_logo'];
         }
 
         //Uodate site settings configuration file
-        config('site-settings', $validated);
+        $this->updateConfig($validated);
 
         return (Setting::where('id', 1)->update($validated))
         ? redirect()->back()->with('success', 'The site settings was successfully updated.')
@@ -134,6 +135,32 @@ class SettingsController extends Controller
     /**
      * Validate user input fields
      */
+    private function updateConfig($validated){
+        config('site-settings', [
+            'site_icon'                     =>  $validated['site_icon'],
+            'site_logo'                     =>  $validated['site_logo'],
+            'site_title'                    =>  $validated['site_title'],
+            'site_tagline'                  =>  $validated['site_tagline'],
+            'site_description'              =>  $validated['site_description'],
+            'website_url'                   =>  $validated['website_url'],
+            'email'                         =>  $validated['email'],
+            'site_address'                  =>  $validated['site_address'],
+            'site_phone_number'             =>  $validated['site_phone_number'],
+            'site_alternative_phone_number' =>  $validated['site_alternative_phone_number'],
+            'site_working_hours'            =>  $validated['site_working_hours'],
+            'facebook_link'                 =>  $validated['facebook_link'],
+            'instagram_link'                =>  $validated['instagram_link'],
+            'linkedin_link'                 =>  $validated['linkedin_link'],
+            'twitter_link'                  =>  $validated['twitter_link'],
+            'youtube_link'                  =>  $validated['youtube_link'],
+            'youtube_link'                  =>  $validated['youtube_link'],
+            'adsense'                       =>  $validated['adsense'],
+        ]);
+    }
+
+    /**
+     * Validate user input fields
+     */
     private function validateRequest(){
         return request()->validate([
             'site_icon'                     =>  'bail|sometimes|mimes:jpg,png,jpeg,gif,svg|max:256',
@@ -152,7 +179,7 @@ class SettingsController extends Controller
             'linkedin_link'                 =>  'bail|sometimes|string',
             'twitter_link'                  =>  'bail|sometimes|string',
             'youtube_link'                  =>  'bail|sometimes|string',
+            'adsense'                       =>  'bail|sometimes|string',
         ]);
     }
-
 }

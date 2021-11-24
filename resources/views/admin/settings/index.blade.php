@@ -54,7 +54,7 @@
 
                             <div class="form-group row gutters">
                                 <label for="site_icon" class="col-sm-3 col-form-label">Site Icon</label>
-                                <div class="col-sm-9 was-validated">
+                                <div class="col-sm-7 was-validated">
                                     <label class="form-control custom-file">
                                         <input type="file" id="site_icon" accept="image/*" class="custom-file-input" @error('site_icon') is-invalid @enderror name="site_icon">
                                         <span class="custom-file-control"></span>
@@ -65,11 +65,14 @@
                                         <x-alert :message="$message" />
                                     @enderror
                                 </div>
+                                <div class="col-sm-2">
+                                    <img src="{{ asset($setting['site_icon']) ?? asset('img/no-image-available.png') }}" width="32px" height="32px">
+                                </div>
                             </div>
 
                             <div class="form-group row gutters">
                                 <label for="site_logo" class="col-sm-3 col-form-label">Site Logo</label>
-                                <div class="col-sm-9 was-validated">
+                                <div class="col-sm-7 was-validated">
                                     <label class="form-control custom-file">
                                         <input type="file" id="site_logo" accept="image/*" class="custom-file-input" @error('site_logo') is-invalid @enderror name="site_logo">
                                         <span class="custom-file-control"></span>
@@ -79,6 +82,9 @@
                                     @error('site_logo')
                                         <x-alert :message="$message" />
                                     @enderror
+                                </div>
+                                <div class="col-sm-2">
+                                    <img src="{{ asset($setting['site_logo']) ?? asset('img/no-image-available.png') }}" width="32px" height="32px">
                                 </div>
                             </div>
 

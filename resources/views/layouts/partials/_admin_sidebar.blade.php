@@ -54,14 +54,49 @@
                         </ul>
                     </li>
 
-                    <li class="{{ Route::currentRouteNamed('admin.settings.index') ? 'active selected' : '' }}">
-                        <a href="{{ route('admin.settings.index') }}">
+                    <li class="{{ Route::currentRouteNamed('admin.menu.index') ? 'active selected' : '' }}">
+                        <a href="{{ route('admin.menu.index') }}">
+                            <span class="has-icon">
+                                <i class="icon-tree"></i>
+                            </span>
+                            <span class="nav-title">Menu</span>
+                        </a>
+                    </li>
+
+                    <li class="{{ Route::currentRouteNamed('admin.settings.index', 'admin.profile.index') ? 'active selected' : '' }}">
+                        <a href="#" class="has-arrow" aria-expanded="false">
+                            <span class="has-icon">
+                                <i class="icon-files-empty"></i>
+                            </span>
+                            <span class="nav-title">Pages</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.settings.index') ? 'current-page' : '' }}" href="{{ route('admin.settings.index') }}">Add New</a>
+                            </li>
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.profile.index') ? 'current-page' : '' }}" href="{{ route('admin.profile.index') }}">All Pages</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="{{ Route::currentRouteNamed('admin.settings.index', 'admin.profile.index') ? 'active selected' : '' }}">
+                        <a href="#" class="has-arrow" aria-expanded="false">
                             <span class="has-icon">
                                 <i class="icon-cog3"></i>
                             </span>
                             <span class="nav-title">Settings</span>
                         </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.settings.index') ? 'current-page' : '' }}" href="{{ route('admin.settings.index') }}">General</a>
+                            </li>
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.profile.index') ? 'current-page' : '' }}" href="{{ route('admin.profile.index') }}">Profile</a>
+                            </li>
+                        </ul>
                     </li>
+
 
                     {{-- <li class="{{ Route::currentRouteNamed('admin.users.customer.index', 'admin.users.customer.show') ? 'active selected' : '' }}">
                         <a href="{{ route('admin.users.customer.index') }}">

@@ -45,7 +45,7 @@ $(function () {
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#40E0D0',
+            confirmButtonColor: '#559c75',
             cancelButtonColor: '#ff3e61',
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
@@ -66,7 +66,7 @@ $(function () {
             text: "You won't be able to revert this!",
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#40E0D0',
+            confirmButtonColor: '#559c75',
             cancelButtonColor: '#ff3e61',
             confirmButtonText: 'Yes, cancel it!'
         }).then((result) => {
@@ -87,7 +87,7 @@ $(function () {
             text: "You will be able to reinstate afterwards!",
             type: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#40E0D0',
+            confirmButtonColor: '#559c75',
             cancelButtonColor: '#ff3e61',
             confirmButtonText: 'Yes, deactivate it!'
         }).then((result) => {

@@ -24,35 +24,6 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 |
 */
 
-//Clear configurations:
-Route::get('/config-clear', function() {
-    $status = Artisan::call('config:clear');
-    return '<h1 style="color: #4CAF50">Configurations cleared</h1>';
-});
-
-//Clear cache:
-Route::get('/cache-clear', function() {
-    $status = Artisan::call('cache:clear');
-    return '<h1 style="color: #4CAF50">Cache cleared</h1>';
-});
-
-//Clear view:
-Route::get('/view-clear', function() {
-    $status = Artisan::call('view:clear');
-    return '<h1 style="color: #4CAF50">Views cleared</h1>';
-});
-
-//Clear route:
-Route::get('/route-clear', function() {
-    $status = Artisan::call('route:clear');
-    return '<h1 style="color: #4CAF50">Routes cleared</h1>';
-});
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes([
     'login'    => true,
     'register' => true,
@@ -61,6 +32,23 @@ Auth::routes([
     'confirm'  => false,  // for additional password confirmations
     'verify'   => false,  // for email verification
 ]);
+
+//Clear configurations:
+Route::get('/config-clear', function() {
+    $status = Artisan::call('optimize:clear');
+    return '<h1 style="color: #4CAF50">Configurations cleared</h1>';
+});
+// Routes for frontend
+Route::view('/',                                'frontend.home')->name('frontend.index');
+Route::view('/about-us',                        'frontend.about')->name('frontend.about');
+Route::view('/our-team',                        'frontend.our-team')->name('frontend.our_team');
+Route::view('/contact-us',                      'frontend.contact')->name('frontend.contact');
+Route::view('/services',                        'frontend.services')->name('frontend.services');
+Route::view('/services/consultancy-services',   'frontend.consultancy.consultancy')->name('frontend.services_consultancy_services');
+Route::view('/services/business-development',   'frontend.consultancy.business-development')->name('frontend.services_business_development');
+Route::view('/services/human-resources',        'frontend.human-resources.human-resources')->name('frontend.services_human_resources');
+Route::view('/services/outsourcing',            'frontend.human-resources.outsourcing')->name('frontend.services_outsourcing');
+Route::view('/services/recruitment',            'frontend.human-resources.recruitment')->name('frontend.services_recruitment');
 
 Route::prefix('admin')->name('admin.')->middleware('verified')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('index');
@@ -74,6 +62,9 @@ Route::prefix('admin')->name('admin.')->middleware('verified')->group(function (
     Route::get('posts/publish/{uuid}',            [PostController::class, 'publishPost'])->name('posts.publish');
     Route::get('posts/unpublish/{uuid}',          [PostController::class, 'unpublishPost'])->name('posts.unpublish');
     Route::resource('posts',                      PostController::class);
+
+    //Routes for Menus
+    Route::view('menu', 'admin.menus.index')->name('menu.index');
 
     //Routes for Profile management feature
     Route::put('profile/change-password',         [ProfileController::class, 'changePassword'])->name('profile.change_password');
@@ -91,6 +82,10 @@ Route::prefix('admin')->name('admin.')->middleware('verified')->group(function (
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+Route::get('/email/verify', function () {
+    return view('auth.verify');
+})->middleware('auth')->name('verification.notice');
 
 Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
     $request->fulfill();

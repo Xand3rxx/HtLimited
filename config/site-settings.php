@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'site_icon' => 'img/favicon.png',
+    'site_icon' => '/img/favicon.png',
 
-    'site_logo' => 'img/logo.png',
+    'site_logo' => '/img/logo.png',
 
     'site_title' => 'HT Limited',
 
@@ -27,7 +27,7 @@ return [
 
     'email' => 'info@ht-limitedng.net',
 
-    'site_address' => '23, Hawley Street, Lagos Island, Lagos State, Nigeria',
+    'site_address' => '23, Hawley Street, Suite 3, Lagos Island, Lagos State, Nigeria.',
 
     'site_phone_number' => '+2348137409030',
 

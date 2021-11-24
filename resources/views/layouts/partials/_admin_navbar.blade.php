@@ -1,3 +1,4 @@
+{{-- {{ dd(config('site-settings.site_logo'))}} --}}
 <!-- BEGIN .app-heading -->
 <header class="app-header">
 	<div class="container-fluid">
@@ -10,7 +11,7 @@
 			</div>
 			<div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-4">
 				<a href="{{ route('admin.index') }}" class="logo">
-					<img src="{{ config('site-settings.site_logo') ?? asset('img/logo.png') }}" alt="HT Limited logo" />
+					<img src="{{ config('site-settings.site_logo') }}" alt="HT Limited logo" />
 				</a>
 			</div>
 			<div class="col-xl-5 col-lg-5 col-md-5 col-sm-3 col-4">
