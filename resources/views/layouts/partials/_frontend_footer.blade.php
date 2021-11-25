@@ -26,7 +26,7 @@
                     <ul>
                     <li><i class="bx bx-chevron-right"></i> <a href="{{ route('frontend.index') }}">Home</a></li>
                     <li><i class="bx bx-chevron-right"></i> <a href="{{ route('frontend.about') }}">About us</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                    <li><i class="bx bx-chevron-right"></i> <a href="{{ route('frontend.services') }}">Services</a></li>
                     <li><i class="bx bx-chevron-right"></i> <a href="{{ route('frontend.contact') }}">Contact Us</a></li>
                     <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
                     </ul>

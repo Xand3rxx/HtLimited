@@ -71,7 +71,7 @@
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-4 mt-4 mt-md-0 align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+        <div class="col-lg-4 col-md-4 mt-md-0 align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
               <h3><a href="#">Consultancy</a></h3>
@@ -86,7 +86,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 mt-4 mt-md-0 align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-lg-4 col-md-4 mt-md-0 align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
               <h3><a href="#">HR Solution</a></h3>

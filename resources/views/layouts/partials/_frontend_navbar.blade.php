@@ -19,7 +19,7 @@
 
           <li class="drop-down"><a href="#">Services</a>
             <ul>
-                <li><a href="{{ route('frontend.services') }}">Services</a></li>
+                <li class="{{ Route::currentRouteNamed('frontend.services') ? 'active' : '' }}"><a href="{{ route('frontend.services') }}">Services</a></li>
                 <li class="drop-down"><a href="#">Consultancy</a>
                     <ul>
                         <li class="{{ Route::currentRouteNamed('frontend.services_consultancy_services') ? 'active' : '' }}"><a href="{{ route('frontend.services_consultancy_services') }}">Consultancy Services</a></li>
@@ -34,9 +34,26 @@
                         <li class="{{ Route::currentRouteNamed('frontend.services_recruitment') ? 'active' : '' }}"><a href="{{ route('frontend.services_recruitment') }}">Recruitment</a></li>
                     </ul>
                 </li>
+                <li class="{{ Route::currentRouteNamed('frontend.services_training') ? 'active' : '' }}"><a href="{{ route('frontend.services_training') }}">Training</a></li>
             </ul>
           </li>
-          <li><a href="blog.html">Blog</a></li>
+
+          <li class="drop-down"><a href="#">Business Development</a>
+            <ul>
+                <li class="{{ Route::currentRouteNamed('frontend.business_development_business_loans') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_business_loans') }}">Business Loans</a></li>
+                <li class="{{ Route::currentRouteNamed('frontend.business_development_bank_of_industry_loan') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_bank_of_industry_loan') }}">Bank of Industry(BOI) Loan</a></li>
+            </ul>
+          </li>
+
+          <li class="drop-down"><a href="#">Training</a>
+            <ul>
+                <li class="{{ Route::currentRouteNamed('frontend.training_start_your_business') ? 'active' : '' }}"><a href="{{ route('frontend.training_start_your_business') }}">Start Your Business</a></li>
+                <li class="{{ Route::currentRouteNamed('frontend.training_improve_your_business') ? 'active' : '' }}"><a href="{{ route('frontend.training_improve_your_business') }}">Improve Your Business</a></li>
+                <li class="{{ Route::currentRouteNamed('frontend.training_business_continuity_plan') ? 'active' : '' }}"><a href="{{ route('frontend.training_business_continuity_plan') }}">Business Continuity Plan</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Blog</a></li>
           <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
 
         </ul>

@@ -116,7 +116,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box iconbox-orange ">
               <div class="icon">
                 <img src="{{ asset('assets/frontend/img/abstract/abstract-3.png') }}" class="img-fluid">
@@ -126,7 +126,7 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box iconbox-pink">
                 <div class="icon">
                     <img src="{{ asset('assets/frontend/img/abstract/abstract-7.png') }}" class="img-fluid">
@@ -216,7 +216,7 @@
               </div>
             </div>
 
-            <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-md-0" data-aos="zoom-in" data-aos-delay="200">
               <div class="icon-box iconbox-orange ">
                 <div class="icon">
                   <img src="{{ asset('assets/frontend/img/abstract/abstract-4.png') }}" class="img-fluid">

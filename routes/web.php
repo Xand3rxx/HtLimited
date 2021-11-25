@@ -38,17 +38,32 @@ Route::get('/config-clear', function() {
     $status = Artisan::call('optimize:clear');
     return '<h1 style="color: #4CAF50">Configurations cleared</h1>';
 });
+
 // Routes for frontend
 Route::view('/',                                'frontend.home')->name('frontend.index');
 Route::view('/about-us',                        'frontend.about')->name('frontend.about');
 Route::view('/our-team',                        'frontend.our-team')->name('frontend.our_team');
 Route::view('/contact-us',                      'frontend.contact')->name('frontend.contact');
-Route::view('/services',                        'frontend.services')->name('frontend.services');
-Route::view('/services/consultancy-services',   'frontend.consultancy.consultancy')->name('frontend.services_consultancy_services');
-Route::view('/services/business-development',   'frontend.consultancy.business-development')->name('frontend.services_business_development');
-Route::view('/services/human-resources',        'frontend.human-resources.human-resources')->name('frontend.services_human_resources');
-Route::view('/services/outsourcing',            'frontend.human-resources.outsourcing')->name('frontend.services_outsourcing');
-Route::view('/services/recruitment',            'frontend.human-resources.recruitment')->name('frontend.services_recruitment');
+
+Route::view('/services',                        'frontend.services.services')->name('frontend.services');
+Route::view('/services/training',               'frontend.services.training')->name('frontend.services_training');
+
+Route::view('/services/consultancy/consultancy-services',          'frontend.services.consultancy.consultancy')->name('frontend.services_consultancy_services');
+Route::view('/services/consultancy/business-development',          'frontend.services.consultancy.business-development')->name('frontend.services_business_development');
+
+Route::view('/services/human-resources-management',                'frontend.services.human-resources.human-resources')->name('frontend.services_human_resources');
+Route::view('/services/human-resources-management/outsourcing',    'frontend.services.human-resources.outsourcing')->name('frontend.services_outsourcing');
+Route::view('/services/human-resources-management/recruitment',    'frontend.services.human-resources.recruitment')->name('frontend.services_recruitment');
+
+Route::view('/business-development/business-loans',                     'frontend.business-development.business-loans')->name('frontend.business_development_business_loans');
+Route::view('/business-development/bank-of-industry-loan',              'frontend.business-development.bank-of-industry-loan')->name('frontend.business_development_bank_of_industry_loan');
+Route::view('/business-development/bank-of-industry-loan-requirement',  'frontend.business-development.bank-of-industry-loan-requirement')->name('frontend.business_development_bank_of_industry_requirement');
+Route::view('/business-development/usaid-requirement',                  'frontend.business-development.usaid-requirement')->name('frontend.business_development_usaid_requirement');
+
+Route::view('/training/start-your-business',            'frontend.training.start-your-business')->name('frontend.training_start_your_business');
+Route::view('/training/improve-your-business',          'frontend.training.improve-your-business')->name('frontend.training_improve_your_business');
+Route::view('/training/business-continuity-plan',       'frontend.training.business-continuity-plan')->name('frontend.training_business_continuity_plan');
+
 
 Route::prefix('admin')->name('admin.')->middleware('verified')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('index');
