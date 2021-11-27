@@ -65,4 +65,15 @@ class Post extends Model
         return $this->belongsTo(Category::class)->withTrashed();
     }
 
+    /**
+     * Scope a query to all active posts
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeActivePost($query)
+    {
+        return $query->select('*')
+            ->where('status', 'active');
+    }
 }

@@ -201,7 +201,7 @@ class PostController extends Controller
     private function validateRequest(){
         return request()->validate([
             'title'         =>  'bail|required|string',
-            'cover_image'   =>  'bail|required|mimes:jpg,png,jpeg,gif,svg|max:256',
+            'cover_image'   =>  'bail|required|mimes:jpg,png,jpeg,gif,svg|max:1024',
             'category_id'   =>  'bail|sometimes|numeric',
             'status'        =>  'bail|required|string|in:active,inactive',
             'excerpt'       =>  'bail|required|string',
@@ -217,7 +217,7 @@ class PostController extends Controller
     private function validateUpdateRequest(){
         return request()->validate([
             'title'         =>  'bail|required|string',
-            'cover_image'   =>  'bail|sometimes|mimes:jpg,png,jpeg,gif,svg|max:256',
+            'cover_image'   =>  'bail|sometimes|mimes:jpg,png,jpeg,gif,svg|max:1024',
             'category_id'   =>  'bail|sometimes|numeric',
             'status'        =>  'bail|required|string|in:active,inactive',
             'excerpt'       =>  'bail|required|string',

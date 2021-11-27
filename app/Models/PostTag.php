@@ -28,6 +28,15 @@ class PostTag extends Model
     }
 
     /**
+     * Has many to post relationship.
+     * @return mixed
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'id', 'post_id')->where('status', 'active');
+    }
+
+    /**
      * Has one to tag relationship.
      * @return mixed
      */

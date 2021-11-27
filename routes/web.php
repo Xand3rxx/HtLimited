@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Frontend\BlogController;
 
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -63,6 +64,11 @@ Route::view('/business-development/usaid-requirement',                  'fronten
 Route::view('/training/start-your-business',            'frontend.training.start-your-business')->name('frontend.training_start_your_business');
 Route::view('/training/improve-your-business',          'frontend.training.improve-your-business')->name('frontend.training_improve_your_business');
 Route::view('/training/business-continuity-plan',       'frontend.training.business-continuity-plan')->name('frontend.training_business_continuity_plan');
+
+Route::get('blog/search/{name}',        [BlogController::class, 'search'])->name('blog.search');
+Route::get('blog/tag/{name}',           [BlogController::class, 'filterByTag'])->name('blog.filter_by_tag');
+Route::get('blog/category/{name}',      [BlogController::class, 'filterByCategory'])->name('blog.filter_by_category');
+Route::resource('blog',                 BlogController::class);
 
 
 Route::prefix('admin')->name('admin.')->middleware('verified')->group(function () {

@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Pagination\Paginator;
+use Harimayco\Menu\Models\Menus;
+use Harimayco\Menu\Models\MenuItems;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -28,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
 
+        Paginator::useBootstrap();
+
         VerifyEmail::toMailUsing(function ($notifiable, $url) {
             return (new MailMessage)
                 ->subject('Verify Email Address')
@@ -42,6 +47,17 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('layouts.admin', function ($view) {
             $view->with([
                 'profile'   =>  \App\Models\User::where('id', auth()->user()->id)->first(),
+            ]);
+        });
+
+        view()->composer('layouts.partials._frontend_navbar', function ($view) {
+            $menu = Menus::where('id', 1)->with('items')->first();
+
+            //or you can convert it to array
+            $public_menu = $menu->items->toArray();
+
+            $view->with([
+                'mainMenu'   =>  $public_menu,
             ]);
         });
     }

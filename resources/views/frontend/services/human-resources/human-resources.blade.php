@@ -75,7 +75,7 @@
                 </ul>
 
                 <h6>Recruitment</h6>
-                <p>We renders corporate personnel placement services designed to bring job seekers and their prospective employers together in the hope of getting a one on one match. We learn about the client’s companies and their needs, and then locate the right personnel for the client.</p>
+                <p>We render corporate personnel placement services designed to bring job seekers and their prospective employers together in the hope of getting a one on one match. We learn about the client’s companies and their needs, and then locate the right personnel for the client.</p>
 
                 <h6>Trainin Needs Assessment</h6>
                 <p>We do HR audit and analytics and determine which area of our client work force needs training and the areas that don’t, in other to manage resources and time.</p>
