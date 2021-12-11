@@ -160,12 +160,14 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $uuid
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($uuid)
     {
-        //
+        return (Post::where('uuid', $uuid)->firstOrFail()->delete())
+        ? redirect()->back()->with('success', 'Post was successfully deleted.')
+        : back()->with('error', 'Sorry! An error occured while trying to delete.');
     }
 
     /**
@@ -193,6 +195,20 @@ class PostController extends Controller
         return (Post::where('uuid', $uuid)->firstOrFail()->update(['status'=>'active']))
         ? redirect()->back()->with('success', 'Post was successfully published.')
         : back()->with('error', 'Sorry! An error occured while trying to publish post.');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $uuid
+     * @return \Illuminate\Http\Response
+     */
+    public function deletePost($uuid)
+    {
+        //Soft delete a post
+        return (Post::where('uuid', $uuid)->firstOrFail()->delete())
+        ? redirect()->back()->with('success', 'Post was successfully deleted.')
+        : back()->with('error', 'Sorry! An error occured while trying to delete.');
     }
 
     /**

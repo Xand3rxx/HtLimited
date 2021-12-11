@@ -79,6 +79,16 @@
 <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
 <script src="{{ asset('assets/js/sweetalert2.min.js') }}"></script>
 <script>
+    $(document).ready(function(){
+        //Prevent characters or string asides number in phone number input field
+        $("#phone_number, #alternative_phone_number, #official_phone_number, #official_phone_number_2, #loan_sum").on("keypress keyup blur", function(event) {
+            $(this).val($(this).val().replace(/[^\d].+/, ""));
+            if ((event.which < 48 || event.which > 57)) {
+                event.preventDefault();
+            }
+        });
+    });
+
     //Feedback from session message to be displayed with Sweet Alert
     function displayMessage(message, type) {
         const Toast = swal.mixin({

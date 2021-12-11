@@ -69,10 +69,12 @@
                                                     <a class="dropdown-item text-warning" href="{{ route('admin.posts.unpublish', $post['uuid']) }}" title="Unpublish {{ $post['title']}} post"><span class="icon-warning"></span> Unpublish</a>
                                                 @endif
 
-                                                <form method="post" action="{{ route('admin.posts.destroy', $post['uuid']) }}">
+                                                <a class="dropdown-item text-danger delete-entity" data-url="{{ route('admin.posts.delete_post', $post['uuid']) }}" title="Delete {{ $post['title']}} post"><span class="icon-bin"></span> Delete</a>
+
+                                                {{-- <form method="post" action="{{ route('admin.posts.destroy', $post['uuid']) }}">
                                                     @csrf @method('DELETE')
-                                                    <button type="submit" class="dropdown-item text-danger delete-entity" title="Delete {{ $post['title']}} post"><span class="icon-bin"></span> Delete</button>
-                                                </form>
+                                                    <button type="submit" class="dropdown-item text-danger delete-entit" title="Delete {{ $post['title']}} post"><span class="icon-bin"></span> Delete</button>
+                                                </form> --}}
                                             </div>
                                         </div>
                                     </td>

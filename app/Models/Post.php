@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+// use Illuminate\Database\Eloquent\SoftDeletes;
 use VanOns\Laraberg\Models\Gutenbergable;
 
 class Post extends Model
 {
-    use SoftDeletes, Gutenbergable;
+    use Gutenbergable;
 
     const STATUS = [
         'active'    => 'active',

@@ -11,6 +11,9 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\TrainingController;
+use App\Http\Controllers\Frontend\FormController;
+use App\Http\Controllers\Frontend\PageController;
 
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
@@ -57,18 +60,24 @@ Route::view('/services/human-resources-management/outsourcing',    'frontend.ser
 Route::view('/services/human-resources-management/recruitment',    'frontend.services.human-resources.recruitment')->name('frontend.services_recruitment');
 
 Route::view('/business-development/business-loans',                     'frontend.business-development.business-loans')->name('frontend.business_development_business_loans');
-Route::view('/business-development/bank-of-industry-loan',              'frontend.business-development.bank-of-industry-loan')->name('frontend.business_development_bank_of_industry_loan');
+// Route::view('/business-development/bank-of-industry-loan',              'frontend.business-development.bank-of-industry-loan')->name('frontend.business_development_bank_of_industry_loan');
+Route::get('business-development/bank-of-industry-loan',        [PageController::class, 'bankOfIndustryLoan'])->name('frontend.business_development_bank_of_industry_loan');
+
 Route::view('/business-development/bank-of-industry-loan-requirement',  'frontend.business-development.bank-of-industry-loan-requirement')->name('frontend.business_development_bank_of_industry_requirement');
 Route::view('/business-development/usaid-requirement',                  'frontend.business-development.usaid-requirement')->name('frontend.business_development_usaid_requirement');
 
 Route::view('/training/start-your-business',            'frontend.training.start-your-business')->name('frontend.training_start_your_business');
 Route::view('/training/improve-your-business',          'frontend.training.improve-your-business')->name('frontend.training_improve_your_business');
 Route::view('/training/business-continuity-plan',       'frontend.training.business-continuity-plan')->name('frontend.training_business_continuity_plan');
+Route::resource('training',                 TrainingController::class);
 
 Route::get('blog/search/{name}',        [BlogController::class, 'search'])->name('blog.search');
 Route::get('blog/tag/{name}',           [BlogController::class, 'filterByTag'])->name('blog.filter_by_tag');
 Route::get('blog/category/{name}',      [BlogController::class, 'filterByCategory'])->name('blog.filter_by_category');
 Route::resource('blog',                 BlogController::class);
+
+Route::post('forms/lga-list',          [FormController::class, 'lgaList'])->name('frontend.lga');
+Route::resource('forms',                FormController::class);
 
 
 Route::prefix('admin')->name('admin.')->middleware('verified')->group(function () {
@@ -82,6 +91,7 @@ Route::prefix('admin')->name('admin.')->middleware('verified')->group(function (
     //Routes for Blog Posts
     Route::get('posts/publish/{uuid}',            [PostController::class, 'publishPost'])->name('posts.publish');
     Route::get('posts/unpublish/{uuid}',          [PostController::class, 'unpublishPost'])->name('posts.unpublish');
+    Route::get('posts/delete/{uuid}',             [PostController::class, 'deletePost'])->name('posts.delete_post');
     Route::resource('posts',                      PostController::class);
 
     //Routes for Menus

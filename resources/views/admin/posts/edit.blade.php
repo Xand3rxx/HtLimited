@@ -94,7 +94,7 @@
 
                                 @foreach($tags as $tag)
                                     <label for="{{ $tag['name'] }}">{{ $tag['name'] ?? 'Unavailable'}}</label>
-                                    <input id="{{ $tag['name'] }}" {{ ($tag['id'] == $item['id']) ? 'checked' : '' }} value="{{ old('tag') ?? $tag['id'] }}" name="tag[]" type="checkbox">
+                                    <input id="{{ $tag['name'] }}" {{ (!empty($item['id']) && $tag['id'] == $item['id']) ? 'checked' : '' }} value="{{ old('tag') ?? $tag['id'] }}" name="tag[]" type="checkbox">
                                 @endforeach
                             </div>
 

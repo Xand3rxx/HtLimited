@@ -5,7 +5,8 @@
     <div class="container">
       <div class="row justify-content-center aos-init aos-animate" data-aos="fade-up">
         <div class="col-lg-10">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="{{ route('training.store') }}" method="POST" role="form" class="php-email-form">
+              @csrf
             <small class="mb-10">Asterisk (<span class="text-danger">*</span>) next to a form control's label indicates that such field is <strong>"required"</strong></small>
             <div class="form-row">
                 <div class="col-md-4 form-group">
@@ -51,7 +52,7 @@
 
                 <div class="col-md-12 form-group">
                     <label class="form-label fw-bolder text-dark"><span class="text-danger">*</span>Expectation on the Program</label>
-                    <textarea class="form-control @error('expectation') is-invalid @enderror" name="expectation" rows="3" value="{{ old('expectation') }}" required></textarea>
+                    <textarea class="form-control @error('expectation') is-invalid @enderror" name="expectation" rows="4" required>{{ old('expectation') }}</textarea>
                     @error('expectation')
                       <x-alert :message="$message" />
                     @enderror

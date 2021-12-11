@@ -40,6 +40,7 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/frontend/css/style.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/frontend/vendor/jquery/jquery.min.js') }}"></script>
+    <link href="{{ asset('assets/css/sweetalert2.min.css') }}" rel="stylesheet" type="text/css" />
 
 </head>
 <body>

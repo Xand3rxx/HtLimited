@@ -16,7 +16,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-4 col-md-4 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="col-lg-4 col-md-4 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
               <div class="icon-box iconbox-blue">
                 <div class="icon">
                   <img src="{{ asset('assets/frontend/img/others/our-consideration.png') }}" class="img-fluid">
@@ -44,7 +44,7 @@
                   <h4><a href="#">Appropriate Content</a></h4>
                 <p>Content used in training are specified to the clients needs and contain the right tools necessary to help overcome the identified challenge.</p>
                 </div>
-              </div>
+            </div>
 
             <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-lg-4" data-aos="zoom-in" data-aos-delay="400">
                 <div class="icon-box iconbox-pink">

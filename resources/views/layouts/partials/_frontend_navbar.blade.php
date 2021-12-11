@@ -7,23 +7,27 @@
       <a href="{{ route('frontend.index') }}" class="logo mr-auto"><img src="{{ asset('img/logo.png') }}" alt="HT Limited logo" class="img-fluid"></a>
 
       <nav class="nav-menu d-none d-lg-block">
-        @if($mainMenu)
-            <ul class="menu">
+        {{-- @if($mainMenu)
+            <ul>
                 @foreach($mainMenu as $menu)
                     <li class="{{ !empty($menu['child']) ? 'drop-down' : '' }} {{ (URL::full() == URL::to('/').$menu['link']) ? 'active' : '' }}">
                         <a href="{{ $menu['link'] }}" title="">{{ $menu['label'] }}</a>
                         @if( $menu['child'] )
+                            @include('layouts.partials._menu-child', ['childs' => $menu['child']])
+
                             <ul class="sub-menu">
                                 @foreach( $menu['child'] as $child )
-                                    <li class="{{ (URL::full() == URL::to('/').$child['link']) ? 'active' : '' }}"><a href="{{ $child['link'] }}" title="">{{ $child['label'] }}</a></li>
+                                    <li class="{{ (URL::full() == URL::to('/').$child['link']) ? 'active' : '' }}">
+                                        <a href="{{ $child['link'] }}" title="">{{ $child['label'] }}</a>
+                                    </li>
                                 @endforeach
                             </ul>
                         @endif
                     </li>
                 @endforeach
             </ul>
-        @endif
-        {{-- <ul>
+        @endif --}}
+        <ul>
           <li class="{{ Route::currentRouteNamed('frontend.index') ? 'active' : '' }}"><a href="{{ route('frontend.index') }}">Home</a></li>
 
           <li class="drop-down"><a href="#">About</a>
@@ -72,7 +76,7 @@
           <li><a href="{{ route('blog.index') }}">Blog</a></li>
           <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
 
-        </ul> --}}
+        </ul>
       </nav><!-- .nav-menu -->
 
       <div class="header-social-links">

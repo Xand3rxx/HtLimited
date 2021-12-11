@@ -19,6 +19,8 @@ class TagSeeder extends Seeder
             'Tips',
             'Startup ideas',
             'Skill Enhancement',
+            'Covid-19',
+            'SME\'s',
         ];
 
         foreach($tags as $tag) {
