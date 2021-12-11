@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\PostController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\Admin\TrainingController as AdminTrainingController;
+use App\Http\Controllers\Admin\FormController as AdminFormController;
 use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\TrainingController;
 use App\Http\Controllers\Frontend\FormController;
@@ -94,20 +96,29 @@ Route::prefix('admin')->name('admin.')->middleware('verified')->group(function (
     Route::get('posts/delete/{uuid}',             [PostController::class, 'deletePost'])->name('posts.delete_post');
     Route::resource('posts',                      PostController::class);
 
+    //Routes for Forms
+    Route::get('forms/bank-of-industry-loan',      [AdminFormController::class, 'bankOfIndustryLoan'])->name('form_bank_of_industry_loan');
+
     //Routes for Menus
     Route::view('menu', 'admin.menus.index')->name('menu.index');
 
     //Routes for Profile management feature
-    Route::put('profile/change-password',         [ProfileController::class, 'changePassword'])->name('profile.change_password');
-    Route::resource('profile',                    ProfileController::class);
+    Route::put('profile/change-password',           [ProfileController::class, 'changePassword'])->name('profile.change_password');
+    Route::resource('profile',                      ProfileController::class);
 
     //Routes for Website Settings
-    Route::resource('settings',                   SettingsController::class);
+    Route::resource('settings',                     SettingsController::class);
 
     //Routes for Tags
-    Route::get('tags/deactivate/{uuid}',         [TagController::class, 'deactivate'])->name('tags.deactivate');
-    Route::post('tags/reassign/{uuid}',          [TagController::class, 'reassign'])->name('tags.reassign');
-    Route::resource('tags',                      TagController::class);
+    Route::get('tags/deactivate/{uuid}',            [TagController::class, 'deactivate'])->name('tags.deactivate');
+    Route::post('tags/reassign/{uuid}',             [TagController::class, 'reassign'])->name('tags.reassign');
+    Route::resource('tags',                         TagController::class);
+
+    //Routes for Training
+    Route::get('training/start-your-business',      [AdminTrainingController::class, 'startYourBusiness'])->name('training_start_your_business');
+    Route::get('training/improve-your-business',    [AdminTrainingController::class, 'improveYourBusiness'])->name('training_improve_your_business');
+    Route::get('training/business-continuity-plan', [AdminTrainingController::class, 'businessContinuityPlan'])->name('training_business_continuity_plan');
+
 });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {

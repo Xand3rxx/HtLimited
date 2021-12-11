@@ -54,6 +54,20 @@
                         </ul>
                     </li>
 
+                    <li class="{{ Route::currentRouteNamed('admin.form_bank_of_industry_loan') ? 'active selected' : '' }}">
+                        <a href="#" class="has-arrow" aria-expanded="false">
+                            <span class="has-icon">
+                                <i class="icon-enlarge"></i>
+                            </span>
+                            <span class="nav-title">Forms</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.form_bank_of_industry_loan') ? 'current-page' : '' }}" href="{{ route('admin.form_bank_of_industry_loan') }}">BOI</a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <li class="{{ Route::currentRouteNamed('admin.menu.index') ? 'active selected' : '' }}">
                         <a href="{{ route('admin.menu.index') }}">
                             <span class="has-icon">
@@ -63,7 +77,7 @@
                         </a>
                     </li>
 
-                    <li class="{{ Route::currentRouteNamed('') ? 'active selected' : '' }}">
+                    {{-- <li class="{{ Route::currentRouteNamed('') ? 'active selected' : '' }}">
                         <a href="#" class="has-arrow" aria-expanded="false">
                             <span class="has-icon">
                                 <i class="icon-files-empty"></i>
@@ -78,7 +92,7 @@
                                 <a class="{{ Route::currentRouteNamed('') ? 'current-page' : '' }}" href="#">All Pages</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
 
                     <li class="{{ Route::currentRouteNamed('admin.settings.index', 'admin.profile.index') ? 'active selected' : '' }}">
                         <a href="#" class="has-arrow" aria-expanded="false">
@@ -93,6 +107,26 @@
                             </li>
                             <li>
                                 <a class="{{ Route::currentRouteNamed('admin.profile.index') ? 'current-page' : '' }}" href="{{ route('admin.profile.index') }}">Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="{{ Route::currentRouteNamed('admin.training_start_your_business', 'admin.training_improve_your_business', 'admin.training_business_continuity_plan') ? 'active selected' : '' }}">
+                        <a href="#" class="has-arrow" aria-expanded="false">
+                            <span class="has-icon">
+                                <i class="icon-clipboard"></i>
+                            </span>
+                            <span class="nav-title">Training</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.training_start_your_business') ? 'current-page' : '' }}" href="{{ route('admin.training_start_your_business') }}">Start Your Business</a>
+                            </li>
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.training_improve_your_business') ? 'current-page' : '' }}" href="{{ route('admin.training_improve_your_business') }}">Improve Your Business</a>
+                            </li>
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.training_business_continuity_plan') ? 'current-page' : '' }}" href="{{ route('admin.training_business_continuity_plan') }}">Business Continuity Plan</a>
                             </li>
                         </ul>
                     </li>
