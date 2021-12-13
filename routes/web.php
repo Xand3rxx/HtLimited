@@ -50,6 +50,7 @@ Route::view('/',                                'frontend.home')->name('frontend
 Route::view('/about-us',                        'frontend.about')->name('frontend.about');
 Route::view('/our-team',                        'frontend.our-team')->name('frontend.our_team');
 Route::view('/contact-us',                      'frontend.contact')->name('frontend.contact');
+Route::post('/contact-us/send-mail',            [PageController::class, 'sendContactUsMail'])->name('frontend.send_contact_us');
 
 Route::view('/services',                        'frontend.services.services')->name('frontend.services');
 Route::view('/services/training',               'frontend.services.training')->name('frontend.services_training');

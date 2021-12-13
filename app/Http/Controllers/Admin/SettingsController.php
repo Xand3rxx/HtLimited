@@ -6,6 +6,7 @@ use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Config;
 
 class SettingsController extends Controller
 {
@@ -136,7 +137,7 @@ class SettingsController extends Controller
      * Validate user input fields
      */
     private function updateConfig($validated){
-        config('site-settings', [
+        Config::set('site-settings', [
             'site_icon'                     =>  $validated['site_icon'],
             'site_logo'                     =>  $validated['site_logo'],
             'site_title'                    =>  $validated['site_title'],
