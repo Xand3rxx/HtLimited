@@ -145,15 +145,15 @@
                     @enderror
                 </div>
 
-                <div class="col-md-4 form-group">
-                    <label class="form-label fw-bolder text-dark">Official Phone Number 2</label>
+                <div class="col-md-6 form-group">
+                    <label class="form-label fw-bolder text-dark">Alternative Official Phone Number</label>
                     <input type="tel" class="form-control @error('official_phone_number_2') is-invalid @enderror" name="official_phone_number_2" id="official_phone_number_2" maxlength="11" value="{{ old('official_phone_number_2') }}">
                     @error('official_phone_number_2')
                         <x-alert :message="$message" />
                     @enderror
                 </div>
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                     <label class="form-label fw-bolder text-dark"><span class="text-danger">*</span>Industry Sector</label>
                     <select class="form-control @error('industry_sector') is-invalid @enderror" name="industry_sector" id="industry_sector">
                         <option selected disabled value="">Select...</option>
@@ -179,7 +179,7 @@
                     @enderror
                 </div>
 
-                <div class="col-md-4 form-group">
+                <div class="col-md-12 form-group">
                     <label class="form-label fw-bolder text-dark"><span class="text-danger">*</span>Products</label>
                     <input type="text" class="form-control @error('products') is-invalid @enderror" name="products" id="products" value="{{ old('products') }}">
                     @error('products')
@@ -232,7 +232,7 @@
                 </div>
             </div>
 
-            <h5 class="mt-2 mb-3">Loan Request Details(₦)</h5>
+            <h5 class="mt-2 mb-3">Loan Request Details</h5>
             <div class="form-row">
                 <div class="col-md-12 form-group">
                     <label class="form-label fw-bolder text-dark "><span class="text-danger">*</span>Loan Sum (e.g. ₦10,000,000)</label>
@@ -250,26 +250,19 @@
                     @enderror
                 </div>
 
-                <div class="col-md-12 form-group">
-                    <label class="form-label fw-bolder text-dark"><span class="text-danger">*</span>Have you read and understood the requirements for this loan request?</label><br>
-                    <div class="form-check form-check-inline">
+                <div class="col-md-12 mb-10">
+                    <div class="form-check">
                         <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="loan_request_agreement" id="inlineRadio1" value="Yes" {{ old('loan_request_agreement') == 'Yes' ? 'checked' : ''}}> Yes
+                            <input class="form-check-input @error('loan_request_agreement') is-invalid @enderror" type="checkbox" style="margin-top: -0.58rem !important" name="loan_request_agreement" {{ old('loan_request_agreement') ? 'checked' : '' }} />
+                            Have you read and understood the requirements for this loan request?
                         </label>
+                        @error('loan_request_agreement')
+                            <x-alert :message="$message" />
+                        @enderror
                     </div>
-
-                    <div class="form-check form-check-inline">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="radio" name="loan_request_agreement" id="inlineRadio1" value="No" {{ old('loan_request_agreement') == 'No' ? 'checked' : ''}}> No
-                        </label>
-                    </div>
-                    @error('loan_request_agreement')
-                      <x-alert :message="$message" />
-                    @enderror
                 </div>
 
                 <input type="hidden" name="form_type" class="d-none" value="Boi">
-
             </div>
 
             <div class="text-center"><button type="submit">Submit Request</button></div>

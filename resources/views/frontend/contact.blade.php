@@ -74,6 +74,14 @@
                 <textarea class="form-control @error('message') is-invalid @enderror" name="message" rows="5" placeholder="Message">{{ old('message') }}</textarea>
             </div>
 
+            <div class="form-group @error('g-recaptcha-response') is-invalid @enderror">
+                {!! RecaptchaV3::initJs() !!}
+                {!! RecaptchaV3::field('contact_us') !!}
+                @error('g-recaptcha-response')
+                    <x-alert :message="$message" />
+                @enderror
+            </div>
+
             <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -11,6 +12,8 @@ class Form extends Model
     use SoftDeletes;
 
     const TYPES = ['Boi', 'Others'];
+
+    const STATUS = ['Pending', 'Approved', 'Declined'];
 
     /**
      * The attributes that aren't mass assignable.
@@ -36,6 +39,10 @@ class Form extends Model
     protected static function booted()
     {
         parent::boot();
+
+        static::creating(function ($form) {
+            $form->uuid = (string) Str::uuid(); // Create uuid when a new form is to be created
+        });
 
         //Send confirmation email after loan request was successfully submitted.
         static::created(function ($loanRequest) {

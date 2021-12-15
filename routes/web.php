@@ -50,7 +50,7 @@ Route::view('/',                                'frontend.home')->name('frontend
 Route::view('/about-us',                        'frontend.about')->name('frontend.about');
 Route::view('/our-team',                        'frontend.our-team')->name('frontend.our_team');
 Route::view('/contact-us',                      'frontend.contact')->name('frontend.contact');
-Route::post('/contact-us/send-mail',            [PageController::class, 'sendContactUsMail'])->name('frontend.send_contact_us');
+Route::post('/contact-us',                      [PageController::class, 'sendContactUsMail'])->name('frontend.send_contact_us');
 
 Route::view('/services',                        'frontend.services.services')->name('frontend.services');
 Route::view('/services/training',               'frontend.services.training')->name('frontend.services_training');
@@ -74,7 +74,7 @@ Route::view('/training/improve-your-business',          'frontend.training.impro
 Route::view('/training/business-continuity-plan',       'frontend.training.business-continuity-plan')->name('frontend.training_business_continuity_plan');
 Route::resource('training',                 TrainingController::class);
 
-Route::get('blog/search/{name}',        [BlogController::class, 'search'])->name('blog.search');
+Route::post('blog/search',              [BlogController::class, 'search'])->name('blog.search');
 Route::get('blog/tag/{name}',           [BlogController::class, 'filterByTag'])->name('blog.filter_by_tag');
 Route::get('blog/category/{name}',      [BlogController::class, 'filterByCategory'])->name('blog.filter_by_category');
 Route::resource('blog',                 BlogController::class);
@@ -84,7 +84,7 @@ Route::resource('forms',                FormController::class);
 
 
 Route::prefix('admin')->name('admin.')->middleware('verified')->group(function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('index');
+    Route::get('/', [HomeController::class, 'index'])->name('index');
 
     //Routes for Categories
     Route::get('categories/deactivate/{uuid}',    [CategoryController::class, 'deactivate'])->name('categories.deactivate');
@@ -99,6 +99,9 @@ Route::prefix('admin')->name('admin.')->middleware('verified')->group(function (
 
     //Routes for Forms
     Route::get('forms/bank-of-industry-loan',      [AdminFormController::class, 'bankOfIndustryLoan'])->name('form_bank_of_industry_loan');
+    Route::get('forms/bank-of-industry-loan/{uuid}',      [AdminFormController::class, 'showBankOfIndustryLoan'])->name('show_form_bank_of_industry_loan');
+    Route::get('forms/bank-of-industry-loan/apprive/{uuid}',      [AdminFormController::class, 'approveBankOfIndustryLoan'])->name('approve_form_bank_of_industry_loan');
+    Route::get('forms/bank-of-industry-loan/decline/{uuid}',      [AdminFormController::class, 'declineBankOfIndustryLoan'])->name('decline_form_bank_of_industry_loan');
 
     //Routes for Menus
     Route::view('menu', 'admin.menus.index')->name('menu.index');

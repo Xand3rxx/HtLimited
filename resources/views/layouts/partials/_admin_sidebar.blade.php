@@ -54,7 +54,7 @@
                         </ul>
                     </li>
 
-                    <li class="{{ Route::currentRouteNamed('admin.form_bank_of_industry_loan') ? 'active selected' : '' }}">
+                    <li class="{{ Route::currentRouteNamed('admin.form_bank_of_industry_loan', 'admin.show_form_bank_of_industry_loan') ? 'active selected' : '' }}">
                         <a href="#" class="has-arrow" aria-expanded="false">
                             <span class="has-icon">
                                 <i class="icon-enlarge"></i>
@@ -63,7 +63,7 @@
                         </a>
                         <ul aria-expanded="false">
                             <li>
-                                <a class="{{ Route::currentRouteNamed('admin.form_bank_of_industry_loan') ? 'current-page' : '' }}" href="{{ route('admin.form_bank_of_industry_loan') }}">BOI</a>
+                                <a class="{{ Route::currentRouteNamed('admin.form_bank_of_industry_loan', 'admin.show_form_bank_of_industry_loan') ? 'current-page' : '' }}" href="{{ route('admin.form_bank_of_industry_loan') }}">BOI</a>
                             </li>
                         </ul>
                     </li>

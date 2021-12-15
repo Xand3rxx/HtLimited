@@ -73,8 +73,8 @@
             </ul>
           </li>
 
-          <li><a href="{{ route('blog.index') }}">Blog</a></li>
-          <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
+          <li class="{{ Route::currentRouteNamed('blog.index', 'blog.filter_by_tag', 'blog.filter_by_category') ? 'active' : '' }}"><a href="{{ route('blog.index') }}">Blog</a></li>
+          <li class="{{ Route::currentRouteNamed('frontend.contact') ? 'active' : '' }}"><a href="{{ route('frontend.contact') }}">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->

@@ -36,7 +36,8 @@
 
                 <div class="col-lg-2 col-md-6 footer-newsletter">
                     <h4>Sponsored</h4>
-                    <script type="text/javascript"> google_ad_client = "pub-8232357139186190"; google_ad_width = 400; google_ad_height = 90; google_ad_format = "728x90_as"; google_ad_type = "text_image"; google_color_border = "FFFFFF"; google_color_bg = "0000FF"; google_color_link = "FFFFFF"; google_color_text = "000000"; google_color_url = "008000"; </script> <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                    <script type="text/javascript"> google_ad_client = "ca-pub-8232357139186190"; google_ad_width = 400; google_ad_height = 90; google_ad_format = "728x90_as"; google_ad_type = "text_image"; google_color_border = "FFFFFF"; google_color_bg = "0000FF"; google_color_link = "FFFFFF"; google_color_text = "000000"; google_color_url = "008000"; </script> <script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+
                     {{-- @push('scripts')
                         {{ config('site-settings.adsense') }}
                     @endpush --}}
@@ -78,6 +79,7 @@
 <!-- Template Main JS File -->
 <script src="{{ asset('assets/frontend/js/main.js') }}"></script>
 <script src="{{ asset('assets/js/sweetalert2.min.js') }}"></script>
+
 <script>
     $(document).ready(function(){
         //Prevent characters or string asides number in phone number input field

@@ -32,7 +32,7 @@ class SettingsSeeder extends Seeder
             'twitter_link'                  => 'https://twitter.com/Ht_Ltd',
             'youtube_link'                  => '#',
             'adsense' => '<script type="text/javascript">
-    google_ad_client = "pub-8232357139186190";
+    google_ad_client = "ca-pub-8232357139186190";
     google_ad_width = 400;
     google_ad_height = 90;
     google_ad_format = "728x90_as";

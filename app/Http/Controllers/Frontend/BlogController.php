@@ -7,7 +7,7 @@ use App\Models\Tag;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
+use VanOns\Laraberg\Models\Content;
 
 class BlogController extends Controller
 {
@@ -133,24 +133,23 @@ class BlogController extends Controller
     }
 
     /**
-     * Display a listing of blog posts by search query.
-     *
-     * @param  string  $query
+     * Display a listing of blog posts by sear
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function search($query){
+    public function search(Request $request){
+        $query = $request->only('query');
 
-        return DB::table('lb_contents')->where('rendered_content', 'LIKE', "%{$query}%")->get();
-        // return Post::where('excerpt', 'LIKE', "%{$query}%")
-                // ->orWhere('lb_content', 'LIKE', "%{$query}%")
-                // ->latest()->get();
+        // return Content::Where('rendered_content', 'LIKE', "%{$query['query']}%")
+        // ->with('contentable')->get();
 
         return view('frontend.blog.filter.search', [
-            'posts'         => Post::where('name', $query)->latest()->firstorFail(),
+            'posts'         => Content::Where('rendered_content', 'LIKE', "%{$query['query']}%")
+            ->with('contentable')->get(),
             'tags'          => Tag::orderBy('name')->latest()->get(),
             'categories'    => Category::withCount('posts')->orderBy('name')->get(),
             'recentPosts'   => Post::activePost()->inRandomOrder()->take(5)->get(10),
-            'title'         => 'Search Query: '.$query,
+            'title'         => 'Search Query: '.$query['query'],
         ]);
     }
 }

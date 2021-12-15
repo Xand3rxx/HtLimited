@@ -30,10 +30,11 @@ class PageController extends Controller
     {
         //Validate user contact request
         $validated = $request->validate([
-            'full_name' =>  'bail|required|string|max:180',
-            'email'     =>  'bail|required|email|string',
-            'subject'   =>  'bail|required|string|max:180',
-            'message'   =>  'bail|required|string',
+            'full_name'             =>  'bail|required|string|max:180',
+            'email'                 =>  'bail|required|email|string',
+            'subject'               =>  'bail|required|string|max:180',
+            'message'               =>  'bail|required|string',
+            'g-recaptcha-response'  =>  'bail|required|recaptchav3:contact_us,0.5'
         ]);
 
         Mail::send(new \App\Mail\ContactUs($validated));

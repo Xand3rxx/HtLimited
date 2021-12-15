@@ -7,7 +7,7 @@ $(function() {
 		size: "7px",
 		distance: '1px',
 		railVisible: false,
-		railColor: "#559c75",
+		railColor: "#30D5C8",
 	});
 });
 
@@ -20,7 +20,7 @@ $(function() {
 		size: "7px",
 		distance: '1px',
 		railVisible: false,
-		railColor: "#559c75",
+		railColor: "#30D5C8",
 	});
 });
 
@@ -33,7 +33,7 @@ $(function() {
 		size: "7px",
 		distance: '1px',
 		railVisible: false,
-		railColor: "#559c75",
+		railColor: "#30D5C8",
 	});
 });
 
@@ -47,7 +47,7 @@ $(function() {
 		size: "8px",
 		distance: '1px',
 		railVisible: false,
-		railColor: "#559c75",
+		railColor: "#30D5C8",
 	});
 });
 

@@ -26,6 +26,65 @@
 
 </head>
 <body>
+    <style>
+        div.dt-buttons {
+            margin-top: 1em;
+            margin-left: 1.5em;
+        }
+
+        button.dt-button,
+        div.dt-button,
+        a.dt-button,
+        input.dt-button {
+            font-size: inherit !important;
+            color: #fff !important;
+            background-color: #30D5C8 !important;
+            background: linear-gradient(to bottom, rgb(48 213 200) 0%, rgb(48 213 200) 100%);
+            border-color: #30D5C8 !important;
+            display: inline-block !important;
+            font-weight: 400 !important;
+            text-align: center !important;
+            vertical-align: middle !important;
+            user-select: none !important;
+            background-color: transparent !important;
+            border: 1px solid transparent !important;
+            padding: 0.46875rem 0.9375rem !important;
+            font-size: 0.875rem !important;
+            line-height: 1.5 !important;
+            border-radius: 0.25rem !important;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+            line-height: 1.5 i !important;
+            text-decoration: none;
+            outline: none;
+            text-overflow: ellipsis;
+            cursor: pointer;
+        }
+
+        button.dt-button:hover,
+        div.dt-button:hover,
+        a.dt-button:hover,
+        input.dt-button:hover {
+            color: #fff !important;
+            background-color: #30D5C8 !important;
+            background: linear-gradient(to bottom, rgb(48 213 200) 0%, rgb(48 213 200) 100%);
+            border-color: #30D5C8 !important;
+        }
+
+        .position-top{
+            position:fixed;
+            left:0;
+            width:100%;
+        z-index: 30000;
+        background: #8392a5;;
+        border-color: #8392a5;;
+        border-radius: 0;
+        color:#fff;
+            display: flex;
+            justify-content: space-evenly;
+            top:40px
+        }
+
+    </style>
     <!-- Loading starts -->
 		<div id="loading-wrapper">
 			<div id="loader">
@@ -70,6 +129,12 @@
     <script src="{{ asset('assets/vendor/datatables/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/lightgallery-all.min.js') }}"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.print.min.js"></script>
     <script>
         $(document).ready(function(){
             //Replace broken blog images with default picture

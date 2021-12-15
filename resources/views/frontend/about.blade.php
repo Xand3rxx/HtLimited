@@ -171,12 +171,12 @@
   </section><!-- End Features Section -->
 
   <section id="contact" class="services contact">
-    <div class="container" style="background-color: #559c75; color: #fff">
+    <div class="container" style="background-color: #30D5C8; color: #fff">
         <div class="row justify-content-center" data-aos="fade-up">
             <div class="col-lg-112">
             <div class="info-wrap">
                 <div class="row">
-                <div class="col-lg-12 info mt-4 mt-lg-0" style="background-color: #559c75; color: #fff">
+                <div class="col-lg-12 info mt-4 mt-lg-0" style="background-color: #30D5C8; color: #fff">
                     <h3 class="font-weight-bold">Would you like to start a project with us?</h3>
                     <h5>Want professional Business Development, Consultancy and HR solutions from our group of experienced personnel in other to mobilize your team effectively.</h5>
                     <i class="icofont-phone"></i>

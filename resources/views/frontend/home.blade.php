@@ -145,7 +145,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>We Have Worked With</h2>
+          <h2>We Work With</h2>
         </div>
 
         <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
@@ -153,6 +153,12 @@
           <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
                 <img src="{{ asset('assets/frontend/img/clients/client-1.png') }}" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/client-2.png') }}" class="img-fluid">
             </div>
           </div>
 
@@ -174,9 +180,27 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-6">
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/client-6.png') }}" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/client-7.png') }}" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
                 <img src="{{ asset('assets/frontend/img/clients/client-8.png') }}" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/affiliation-2.png') }}" class="img-fluid">
             </div>
           </div>
 
@@ -260,23 +284,23 @@
 
           <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
 
-            <div class="col-lg-4 col-md-4 col-6">
+            {{-- <div class="col-lg-4 col-md-4 col-6">
               <div class="client-logo">
                 <img src="{{ asset('assets/frontend/img/clients/affiliation-1.png') }}" class="img-fluid">
               </div>
-            </div>
+            </div> --}}
 
-            <div class="col-lg-4 col-md-4 col-6">
+            <div class="col-lg-12 col-md-4 col-6">
               <div class="client-logo">
                   <img src="{{ asset('assets/frontend/img/clients/affiliation-2.png') }}" class="img-fluid">
               </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-6">
+            {{-- <div class="col-lg-4 col-md-4 col-6">
               <div class="client-logo">
                   <img src="{{ asset('assets/frontend/img/clients/affiliation-3.png') }}" class="img-fluid">
               </div>
-            </div>
+            </div> --}}
           </div>
 
         </div>
