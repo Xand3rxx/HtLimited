@@ -79,7 +79,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
 
             <ul>
-              <h4>We Offer:</h4>
+              <h4>We Do:</h4>
               <li><i class="ri-check-double-line"></i> Business Development Services</li>
               <li><i class="ri-check-double-line"></i> Consulting</li>
               <li><i class="ri-check-double-line"></i> HR Outsourcing</li>

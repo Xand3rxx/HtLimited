@@ -3,7 +3,7 @@
 @section('content')
 
 <main id="main">
-    <x-breadcrumb name="Bank of Industry Loan Requirements" />
+    <x-breadcrumb name="Bank of Industry Loan" />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
@@ -11,7 +11,7 @@
                 <h2>Bank of Industry Loan Requirements</h2>
             </div>
             <div class="container">
-                <h4 class="mt-10 mb-5">SECTION A – GENERAL INFORMATION</h4>
+                <h4 class="mt-10 mb-5">SECTION A - GENERAL INFORMATION</h4>
 
                 <div class="text-center">
                     <img src="{{ asset('assets/frontend/img/others/we-can-also-help-facilitate-your-loan-application.png') }}" alt="Facilitate loan" width="50%" class="img-fluid">

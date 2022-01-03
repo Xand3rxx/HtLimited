@@ -13,7 +13,7 @@
 
             <div class="col-lg-12" data-aos="fade-up">
               <div class="testimonial-item">
-                <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Feyikemi Odunuga">
+                {{-- <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Feyikemi Odunuga"> --}}
                 <h3>Feyikemi Odunuga</h3>
                 {{-- <h4>Ceo &amp; Founder</h4> --}}
                 <p>
@@ -44,7 +44,7 @@
 
             <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
               <div class="testimonial-item mt-4 mt-lg-4">
-                <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Boniface Iyengunmwena">
+                {{-- <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Boniface Iyengunmwena"> --}}
                 <h3>Boniface Iyengunmwena</h3>
                 {{-- <h4>Designer</h4> --}}
                 <p>
@@ -68,7 +68,7 @@
 
             <div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
               <div class="testimonial-item mt-4">
-                <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Folakemi Adebiyi">
+                {{-- <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Folakemi Adebiyi"> --}}
                 <h3>Folakemi Adebiyi</h3>
                 {{-- <h4>Store Owner</h4> --}}
                 <p>
@@ -89,7 +89,7 @@
 
             <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
               <div class="testimonial-item mt-4">
-                <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Temitayo Gbenro">
+                {{-- <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Temitayo Gbenro"> --}}
                 <h3>Temitayo Gbenro</h3>
                 {{-- <h4>Entrepreneur</h4> --}}
                 <p>
@@ -118,7 +118,7 @@
 
             <div class="col-lg-12" data-aos="fade-up" data-aos-delay="400">
                 <div class="testimonial-item mt-4">
-                  <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Augusta Binaware Toun">
+                  {{-- <img src="{{ asset('assets/frontend/img/team/blank.png') }}" class="testimonial-img" alt="Augusta Binaware Toun"> --}}
                   <h3>Augusta Binaware Toun</h3>
                   {{-- <h4>Freelancer</h4> --}}
                   <p>

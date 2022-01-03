@@ -15,7 +15,7 @@ class PageController extends Controller
      */
     public function bankOfIndustryLoan()
     {
-        return view('frontend.business-development.bank-of-industry-loan', [
+        return view('frontend.business-development.access-to-finance.bank-of-industry-loan', [
             'states'    =>  \App\Models\State::orderBy('name', 'ASC')->get()
         ]);
     }

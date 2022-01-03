@@ -60,10 +60,18 @@
 
           <li class="drop-down"><a href="#">Business Development</a>
             <ul>
-                <li class="{{ Route::currentRouteNamed('frontend.business_development_business_loans') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_business_loans') }}">Business Loans</a></li>
-                <li class="{{ Route::currentRouteNamed('frontend.business_development_bank_of_industry_loan') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_bank_of_industry_loan') }}">Bank of Industry(BOI) Loan</a></li>
+                <li class="drop-down"><a href="#">Access To Finance</a>
+                    <ul>
+                        <li class="{{ Route::currentRouteNamed('frontend.business_development_business_loans') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_business_loans') }}">Business Loans</a></li>
+                        <li class="{{ Route::currentRouteNamed('frontend.business_development_bank_of_industry_loan') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_bank_of_industry_loan') }}">Bank of Industry(BOI) Loan</a></li>
+                    </ul>
+                </li>
+                <li class="{{ Route::currentRouteNamed('frontend.business_development_access_to_market') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_access_to_market') }}">Access To Market</a></li>
+                <li class="{{ Route::currentRouteNamed('frontend.business_development_business_optimization') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_business_optimization') }}">Business Optimization</a></li>
+                <li class="{{ Route::currentRouteNamed('frontend.business_development_coaching') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_coaching') }}">Coaching/Mentoring</a></li>
+                <li class="{{ Route::currentRouteNamed('frontend.business_development_strategy_development') ? 'active' : '' }}"><a href="{{ route('frontend.business_development_strategy_development') }}">Strategy development</a></li>
             </ul>
-          </li>
+        </li>
 
           <li class="drop-down"><a href="#">Training</a>
             <ul>
@@ -73,7 +81,7 @@
             </ul>
           </li>
 
-          <li class="{{ Route::currentRouteNamed('blog.index', 'blog.filter_by_tag', 'blog.filter_by_category') ? 'active' : '' }}"><a href="{{ route('blog.index') }}">Blog</a></li>
+          <li class="{{ Route::currentRouteNamed('blog.index', 'blog.filter_by_tag', 'blog.filter_by_category', 'blog.show') ? 'active' : '' }}"><a href="{{ route('blog.index') }}">Blog</a></li>
           <li class="{{ Route::currentRouteNamed('frontend.contact') ? 'active' : '' }}"><a href="{{ route('frontend.contact') }}">Contact</a></li>
 
         </ul>

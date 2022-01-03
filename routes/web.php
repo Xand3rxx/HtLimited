@@ -62,12 +62,13 @@ Route::view('/services/human-resources-management',                'frontend.ser
 Route::view('/services/human-resources-management/outsourcing',    'frontend.services.human-resources.outsourcing')->name('frontend.services_outsourcing');
 Route::view('/services/human-resources-management/recruitment',    'frontend.services.human-resources.recruitment')->name('frontend.services_recruitment');
 
-Route::view('/business-development/business-loans',                     'frontend.business-development.business-loans')->name('frontend.business_development_business_loans');
-// Route::view('/business-development/bank-of-industry-loan',              'frontend.business-development.bank-of-industry-loan')->name('frontend.business_development_bank_of_industry_loan');
-Route::get('business-development/bank-of-industry-loan',        [PageController::class, 'bankOfIndustryLoan'])->name('frontend.business_development_bank_of_industry_loan');
+Route::view('/business-development/access-to-finance/business-loans',             'frontend.business-development.access-to-finance.business-loans')->name('frontend.business_development_business_loans');
+Route::get('business-development/access-to-finance/bank-of-industry-loan',        [PageController::class, 'bankOfIndustryLoan'])->name('frontend.business_development_bank_of_industry_loan');
+Route::view('/business-development/strategy-development',  'frontend.business-development.strategy-development')->name('frontend.business_development_strategy_development');
+Route::view('/business-development/access-to-market',  'frontend.business-development.access-to-market')->name('frontend.business_development_access_to_market');
+Route::view('/business-development/coaching',  'frontend.business-development.coaching')->name('frontend.business_development_coaching');
+Route::view('/business-development/business-optimization',  'frontend.business-development.business-optimization')->name('frontend.business_development_business_optimization');
 
-Route::view('/business-development/bank-of-industry-loan-requirement',  'frontend.business-development.bank-of-industry-loan-requirement')->name('frontend.business_development_bank_of_industry_requirement');
-Route::view('/business-development/usaid-requirement',                  'frontend.business-development.usaid-requirement')->name('frontend.business_development_usaid_requirement');
 
 Route::view('/training/start-your-business',            'frontend.training.start-your-business')->name('frontend.training_start_your_business');
 Route::view('/training/improve-your-business',          'frontend.training.improve-your-business')->name('frontend.training_improve_your_business');
