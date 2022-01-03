@@ -76,4 +76,16 @@ class Post extends Model
         return $query->select('*')
             ->where('status', 'active');
     }
+
+    /**
+     * Scope a query to all inactive posts
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeinactivePost($query)
+    {
+        return $query->select('*')
+            ->where('status', 'inactive');
+    }
 }

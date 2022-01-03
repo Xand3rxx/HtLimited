@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $posts = Post::latest()->get();
+
+        return view('admin.index', [
+            'posts'         => [
+                'total'             =>  $posts->count(),
+                'totalActivePosts'  =>  Post::activePost()->count(),
+                'drafts'            =>  Post::inactivePost()->count(),
+            ],
+            'latestPosts'   => $posts->take(5),
+        ]);
     }
 }
