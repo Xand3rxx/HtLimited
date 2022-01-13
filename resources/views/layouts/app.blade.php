@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-216257450-1"></script>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +24,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
 
 </head>
+
 <body class="login-bg">
+
     @include('layouts.partials._messages')
     @yield('content')
     <footer class="main-footer no-bdr fixed-btm">
@@ -53,6 +58,7 @@
             });
         }
     </script>
+
     @stack('scripts')
 
 </body>

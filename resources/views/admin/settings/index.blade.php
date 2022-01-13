@@ -14,7 +14,7 @@
                     </div>
                     <div class="page-title">
                         <h5>Site Settings</h5>
-                        <h6 class="sub-heading">This page allows you to edit and update your the default settings for the website such as the site title, icon, description, tagline, social media links, address, working hours etc.</h6>
+                        <h6 class="sub-heading">This page allows you to edit and update the default settings for the website such as the site title, icon, description, tagline, social media links, address, working hours etc.</h6>
                     </div>
                 </div>
 

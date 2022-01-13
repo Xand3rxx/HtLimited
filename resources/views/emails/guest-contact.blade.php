@@ -10,11 +10,6 @@ Thanks for reaching out to us. We appreciate your interest in our business. This
 
 If you need immediate assistance or have any further questions, feel free to call us with the number below.<br>
 
-Sincerely,<br>
-{{ config('site-settings.site_title') }}
-<br><br>
-{{ config('site-settings.site_address') }}
-{{ config('site-settings.site_phone_number') }} | {{ config('site-settings.email') }}
-<br>
-<img src="https://ht-limitedng.net/wp-content/uploads/2015/04/resized.png" width="90" alt="HT Limited Logo">
+@include('emails._mail_footer')
+
 @endcomponent

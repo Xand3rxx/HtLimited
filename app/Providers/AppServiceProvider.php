@@ -2,13 +2,13 @@
 
 namespace App\Providers;
 
+use Harimayco\Menu\Models\Menus;
+use Harimayco\Menu\Models\MenuItems;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Pagination\Paginator;
-use Harimayco\Menu\Models\Menus;
-use Harimayco\Menu\Models\MenuItems;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -41,7 +41,7 @@ class AppServiceProvider extends ServiceProvider
         });
 
         config([
-            'site-settings' => \App\Models\Setting::first() ?? config('site-settings')
+            'site-settings' => \App\Models\Setting::first() ?? config('site-settings'),
         ]);
 
         view()->composer('layouts.admin', function ($view) {

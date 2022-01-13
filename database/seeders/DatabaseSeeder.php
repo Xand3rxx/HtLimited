@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             StateSeeder::class,
             LgaSeeder::class,
             SettingsSeeder::class,
+            SMTPSeeder::class,
             UserSeeder::class,
             CategorySeeder::class,
             TagSeeder::class,

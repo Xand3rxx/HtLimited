@@ -94,7 +94,7 @@
                         </ul>
                     </li> --}}
 
-                    <li class="{{ Route::currentRouteNamed('admin.settings.index', 'admin.profile.index') ? 'active selected' : '' }}">
+                    <li class="{{ Route::currentRouteNamed('admin.settings.index', 'admin.profile.index', 'admin.smtp-settings.index') ? 'active selected' : '' }}">
                         <a href="#" class="has-arrow" aria-expanded="false">
                             <span class="has-icon">
                                 <i class="icon-cog3"></i>
@@ -107,6 +107,10 @@
                             </li>
                             <li>
                                 <a class="{{ Route::currentRouteNamed('admin.profile.index') ? 'current-page' : '' }}" href="{{ route('admin.profile.index') }}">Profile</a>
+                            </li>
+
+                            <li>
+                                <a class="{{ Route::currentRouteNamed('admin.smtp-settings.index') ? 'current-page' : '' }}" href="{{ route('admin.smtp-settings.index') }}">SMTP Settings</a>
                             </li>
                         </ul>
                     </li>

@@ -18,11 +18,6 @@ Please, consider this as an acceptance email. If you have any questions contact 
 
 We look forward to seeing you at the training.
 
-Sincerely,<br>
-{{ config('site-settings.site_title') }}
-<br><br>
-{{ config('site-settings.site_address') }}
-{{ config('site-settings.site_phone_number') }} | {{ config('site-settings.email') }}
-<br>
-<img src="https://ht-limitedng.net/wp-content/uploads/2015/04/resized.png" width="90" alt="HT Limited Logo">
+@include('emails._mail_footer')
+
 @endcomponent

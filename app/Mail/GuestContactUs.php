@@ -31,7 +31,8 @@ class GuestContactUs extends Mailable
     public function build()
     {
         return $this->markdown('emails.guest-contact')
-            ->from('info@ht-limitedng.net')
+            // ->from('info@ht-limitedng.net')
+            ->from(config('smtp-settings.smtp_mail_username'))
             ->to($this->data['email'])
             ->subject('Thank you for contacting HT Limited')
             ->with('data', $this->data);

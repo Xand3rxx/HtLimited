@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\Post;
-use App\models\Category;
+use App\Models\Category;
 
 class PostController extends Controller
 {
@@ -32,7 +32,7 @@ class PostController extends Controller
     {
         return view('admin.posts.create', [
             'categories'    => Category::get()->sortBy('name'),
-            'tags'          => \App\models\Tag::get()->sortBy('name')
+            'tags'          => \App\Models\Tag::get()->sortBy('name')
         ]);
     }
 
@@ -98,7 +98,7 @@ class PostController extends Controller
     {
         return view('admin.posts.edit', [
             'categories'    => Category::get()->sortBy('name'),
-            'tags'          => \App\models\Tag::get()->sortBy('name'),
+            'tags'          => \App\Models\Tag::get()->sortBy('name'),
             'post'  =>  Post::where('uuid', $uuid)->firstOrFail()
         ]);
     }

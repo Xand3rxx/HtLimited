@@ -33,7 +33,8 @@ class ContactUs extends Mailable
 
         return $this->markdown('emails.contact')
             ->from($this->data['email'])
-            ->to('info@ht-limitedng.net')
+            ->to(config('smtp-settings.smtp_mail_username'))
+            // ->to('info@ht-limitedng.net')
             ->subject($this->data['full_name'] .' contacted HT Limited')
             ->with('data', $this->data);
     }

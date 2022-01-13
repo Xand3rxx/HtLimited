@@ -31,7 +31,7 @@ class HomeController extends Controller
         $posts = Post::latest()->get();
 
         //retrieve visitors and pageview data for the current day and the last seven days
-        $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+        // $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
 
         //retrieve visitors and pageviews since the 6 months ago
         // $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::months(6));
@@ -46,7 +46,7 @@ class HomeController extends Controller
         //     ]
         // );
 
-        dd($analyticsData);
+        // dd($analyticsData);
 
 
         return view('admin.index', [
@@ -55,7 +55,8 @@ class HomeController extends Controller
                 'totalActivePosts'  =>  Post::activePost()->count(),
                 'drafts'            =>  Post::inactivePost()->count(),
             ],
-            'latestPosts'   => $posts->take(5),
+            'latestPosts'           => $posts->take(5),
+            'administratorName'     => auth()->user()->name,
         ]);
     }
 }

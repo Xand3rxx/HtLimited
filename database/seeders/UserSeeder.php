@@ -18,6 +18,7 @@ class UserSeeder extends Seeder
             'name'              => 'HT Limited',
             'email'             => 'info@ht-limitedng.net',
             'password'          => bcrypt('admin12345'),
+            // 'password'          => bcrypt('v\@4*mWk'),
             'email_verified_at' => now(),
             'avatar'            => 'blank.png',
         ]);
