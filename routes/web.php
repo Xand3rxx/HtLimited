@@ -89,7 +89,7 @@ Route::post('forms/lga-list',          [FormController::class, 'lgaList'])->name
 Route::resource('forms',                FormController::class);
 
 
-Route::prefix('admin')->name('admin.')->middleware('verified')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
 
     //Routes for Categories

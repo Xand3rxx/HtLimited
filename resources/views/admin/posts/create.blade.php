@@ -28,7 +28,7 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                 <div class="card">
                     @include('admin.posts._errors')
-                    <form action="{{route('admin.posts.index')}}" method="POST" enctype="multipart/form-data">
+                    <form action="{{route('admin.posts.store')}}" method="POST" enctype="multipart/form-data">
                         @csrf
                             <div class="card-header">Create New Blog Post</div>
                             <div class="card-body">
@@ -140,7 +140,7 @@
                         <div class="row gutters ml-2 mt-4">
                             <div class="col">
                                 <button class="btn btn-primary" type="submit">Submit</button>
-                                <a href="{{ route('admin.posts.index') }}" class="btn btn-danger" type="submit">Cancel</a>
+                                <a href="{{ route('admin.posts.index') }}" class="btn btn-danger" type="button">Cancel</a>
                             </div>
                         </div>
                     </form>

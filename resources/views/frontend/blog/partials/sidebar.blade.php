@@ -15,7 +15,7 @@
     <div class="sidebar-item categories">
     <ul>
         @foreach ($categories as $category)
-            <li><a href="{{ route('blog.filter_by_category', $category['name']) }}">{{ Str::title($category['name']) }} <span>({{ number_format($category['posts_count']) }})</span></a></li>
+            <li><a href="{{ route('blog.filter_by_category', $category['name']) }}">{{ $category['name'] }} <span>({{ number_format($category['posts_count']) }})</span></a></li>
         @endforeach
     </ul>
 
@@ -36,7 +36,7 @@
     <div class="sidebar-item tags">
     <ul>
         @foreach ($tags as $tag)
-            <li><a href="{{ route('blog.filter_by_tag', $tag['name']) }}">{{ Str::title($tag['name']) }}</a></li>
+            <li><a href="{{ route('blog.filter_by_tag', $tag['name']) }}">{{ $tag['name'] }}</a></li>
         @endforeach
     </ul>
 
