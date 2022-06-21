@@ -78,6 +78,7 @@ Route::view('/business-development/business-optimization',  'frontend.business-d
 Route::view('/training/start-your-business',            'frontend.training.start-your-business')->name('frontend.training_start_your_business');
 Route::view('/training/improve-your-business',          'frontend.training.improve-your-business')->name('frontend.training_improve_your_business');
 Route::view('/training/business-continuity-plan',       'frontend.training.business-continuity-plan')->name('frontend.training_business_continuity_plan');
+Route::view('/training/free-online-start-and-improve-your-business',            'frontend.training.free-online-start-your-business')->name('frontend.training_free_online_start_your_business');
 Route::resource('training',                 TrainingController::class);
 
 Route::post('blog/search',              [BlogController::class, 'search'])->name('blog.search');
@@ -87,7 +88,6 @@ Route::resource('blog',                 BlogController::class);
 
 Route::post('forms/lga-list',          [FormController::class, 'lgaList'])->name('frontend.lga');
 Route::resource('forms',                FormController::class);
-
 
 Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
@@ -131,7 +131,6 @@ Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () 
     Route::get('training/start-your-business',      [AdminTrainingController::class, 'startYourBusiness'])->name('training_start_your_business');
     Route::get('training/improve-your-business',    [AdminTrainingController::class, 'improveYourBusiness'])->name('training_improve_your_business');
     Route::get('training/business-continuity-plan', [AdminTrainingController::class, 'businessContinuityPlan'])->name('training_business_continuity_plan');
-
 });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {

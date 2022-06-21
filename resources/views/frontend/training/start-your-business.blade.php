@@ -1,5 +1,5 @@
 @extends('layouts.frontend')
-@section('title', 'Start Your Business')
+@section('title', 'Start Your Business Training')
 @section('content')
 
 <main id="main">

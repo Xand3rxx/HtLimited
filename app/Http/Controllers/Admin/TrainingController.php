@@ -43,4 +43,16 @@ class TrainingController extends Controller
             'trainings' => Training::where('training_type', 'Business continuity plan')->latest()->get(),
         ]);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function freeOnlineStartYourBusiness()
+    {
+        return view('admin.training.start-your-business', [
+            'trainings' => Training::where('training_type', 'Start your business')->latest()->get(),
+        ]);
+    }
 }
