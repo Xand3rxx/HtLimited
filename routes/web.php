@@ -69,11 +69,11 @@ Route::view('/services/human-resources-management/recruitment',    'frontend.ser
 
 Route::view('/business-development/access-to-finance/business-loans',             'frontend.business-development.access-to-finance.business-loans')->name('frontend.business_development_business_loans');
 Route::get('business-development/access-to-finance/bank-of-industry-loan',        [PageController::class, 'bankOfIndustryLoan'])->name('frontend.business_development_bank_of_industry_loan');
+Route::get('business-development/access-to-finance', [PageController::class, 'accessToFinance'])->name('frontend.access_to_finance');
 Route::view('/business-development/strategy-development',  'frontend.business-development.strategy-development')->name('frontend.business_development_strategy_development');
 Route::view('/business-development/access-to-market',  'frontend.business-development.access-to-market')->name('frontend.business_development_access_to_market');
 Route::view('/business-development/coaching',  'frontend.business-development.coaching')->name('frontend.business_development_coaching');
 Route::view('/business-development/business-optimization',  'frontend.business-development.business-optimization')->name('frontend.business_development_business_optimization');
-
 
 Route::view('/training/start-your-business',            'frontend.training.start-your-business')->name('frontend.training_start_your_business');
 Route::view('/training/improve-your-business',          'frontend.training.improve-your-business')->name('frontend.training_improve_your_business');

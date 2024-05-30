@@ -27,7 +27,7 @@
                     <li>Borrowers with no record of unpaid loans to erstwhile development finance institutions and other banks.</li>
                 </ul>
 
-                <h5>Criteria Business Need To Meet To Access Loans</h5>
+                {{-- <h5>Criteria Business Need To Meet To Access Loans</h5>
                 <ul>
                     <li>Formal letter of application.</li>
                     <li>Photocopy of certificate of registration or incorporation of the certified true copies of forms C02 and C07.</li>
@@ -111,7 +111,7 @@
                     <li>Marketing of products and services including distribution arrangement.</li>
                     <li>List, qualification and position and annual salary of existing management and staff (for expansion projects only).</li>
                     <li>For on-going projects, give the existing, Expansion/Diversification and Consolidated projections covering Profit and Loss Accounts, Cash Flow Analysis and Balance Sheets for the period of five (5) years. Also provide the detailed information/data and assumptions used in the above projections</li>
-                </ol>
+                </ol> --}}
 
             </div>
         </div>

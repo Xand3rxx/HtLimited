@@ -13,6 +13,16 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function accessToFinance()
+    {
+        return view('frontend.business-development.access-to-finance.access-to-finance');
+    }
+
+    /**
+     * Show the view for an already existing page.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function bankOfIndustryLoan()
     {
         return view('frontend.business-development.access-to-finance.bank-of-industry-loan', [

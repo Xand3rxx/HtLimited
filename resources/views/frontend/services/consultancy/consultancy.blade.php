@@ -4,23 +4,32 @@
 
 <main id="main">
     <x-breadcrumb name="Consultancy Services" />
+    <x-hero-section image="/assets/frontend/img/slide/slide-7.jpg" title="Consultancy Services" sub-title="Business consultancy offered by professional personnel" />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
-            <div class="section-title">
+            {{-- <div class="section-title">
                 <h2>Consultancy Services</h2>
                 <p>Business consultancy offered by professional personnel</p>
-            </div>
+            </div> --}}
             <div class="container">
-                <p>At HT-limited we offer consultancy to business from SME to multi-nationals at different stages, from start-up to industrial giants our experienced personnels are ready to help.</p>
-                <h4>How we can help?</h4>
-                <p>Some areas how consultancy covers</p>
+                <p>We collaborate with our clients' HR departments to develop and implement comprehensive solutions aligned with their strategic goals. Our services include:</p>
+                {{-- <h4>How we can help?</h4>
+                <p>Some areas how consultancy covers</p> --}}
                 <ul>
-                    <li>Employee Manual</li>
-                    <li>Performance Management System</li>
+                    <li>Employee Manual creation</li>
+                    <li>Standard Operating Procedure development</li>
+                    <li>Staff Auditing and optimization</li>
+                    <li>Performance Management System design and implementation</li>
+                    <li>Human Resources Information Systems (HRIS) setup and management</li>
+                    <li>Payroll management and administration</li>
+                    <li>HR Function Audit and improvement</li>
+                    <li>Salary surveys and benchmarking</li>
                 </ul>
 
-                <h4><u>Business Plan Template</u></h4>
+                <p>Our expertise helps clients streamline their HR processes, enhance productivity, and drive business success."</p>
+
+                {{-- <h4><u>Business Plan Template</u></h4>
                 <h5 class="mt-10">Title Page</h5>
                 <p>The title page of your business plan should include some brief information on your business, including your:</p>
                 <ul>
@@ -147,7 +156,7 @@
                     <li>Profit and loss statement</li>
                     <li>Cash flow statement.</li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
     </section>
 </main>

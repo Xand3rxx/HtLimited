@@ -43,8 +43,8 @@
 
                 <li class="drop-down"><a href="#">Services</a>
                     <ul>
-                        <li class="{{ Route::currentRouteNamed('frontend.services') ? 'active' : '' }}"><a
-                                href="{{ route('frontend.services') }}">Services</a></li>
+                        {{-- <li class="{{ Route::currentRouteNamed('frontend.services') ? 'active' : '' }}"><a
+                                href="{{ route('frontend.services') }}">Services</a></li> --}}
                         <li class="drop-down"><a href="#">Consultancy</a>
                             <ul>
                                 <li
@@ -81,10 +81,15 @@
                     <ul>
                         <li class="drop-down"><a href="#">Access To Finance</a>
                             <ul>
-                                <li
+                                {{-- <li
                                     class="{{ Route::currentRouteNamed('frontend.business_development_business_loans') ? 'active' : '' }}">
                                     <a href="{{ route('frontend.business_development_business_loans') }}">Business
-                                        Loans</a></li>
+                                        Loans</a></li> --}}
+
+                                <li
+                                class="{{ Route::currentRouteNamed('frontend.access_to_finance') ? 'active' : '' }}">
+                                <a href="{{ route('frontend.access_to_finance') }}">Access to Finance</a></li>
+
                                 <li
                                     class="{{ Route::currentRouteNamed('frontend.business_development_bank_of_industry_loan') ? 'active' : '' }}">
                                     <a href="{{ route('frontend.business_development_bank_of_industry_loan') }}">Bank
@@ -112,10 +117,10 @@
 
                 <li class="drop-down"><a href="#">Training</a>
                     <ul>
-                        <li
+                        {{-- <li
                             class="{{ Route::currentRouteNamed('frontend.training_free_online_start_your_business') ? 'active' : '' }}">
                             <a href="{{ route('frontend.training_free_online_start_your_business') }}">Free Online
-                                SIYB</a></li>
+                                SIYB</a></li> --}}
                         <li
                             class="{{ Route::currentRouteNamed('frontend.training_start_your_business') ? 'active' : '' }}">
                             <a href="{{ route('frontend.training_start_your_business') }}">Start Your Business</a>
@@ -124,10 +129,10 @@
                             class="{{ Route::currentRouteNamed('frontend.training_improve_your_business') ? 'active' : '' }}">
                             <a href="{{ route('frontend.training_improve_your_business') }}">Improve Your
                                 Business</a></li>
-                        <li
+                        {{-- <li
                             class="{{ Route::currentRouteNamed('frontend.training_business_continuity_plan') ? 'active' : '' }}">
                             <a href="{{ route('frontend.training_business_continuity_plan') }}">Business Continuity
-                                Plan</a></li>
+                                Plan</a></li> --}}
                     </ul>
                 </li>
 

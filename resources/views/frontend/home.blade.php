@@ -9,7 +9,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/frontend/img/slide/slide-1.jpg);">
+        <div class="carousel-item active" style="background-image: url(assets/frontend/img/slide/slide-4.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Welcome to <span>HT Limited</span></h2>
@@ -20,7 +20,7 @@
         </div>
 
         <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/frontend/img/slide/slide-2.jpg);">
+        <div class="carousel-item" style="background-image: url(assets/frontend/img/slide/slide-6.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>Better Team Management</h2>
@@ -31,7 +31,7 @@
         </div>
 
         <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/frontend/img/slide/slide-3.jpg);">
+        <div class="carousel-item" style="background-image: url(assets/frontend/img/slide/slide-5.jpg);">
           <div class="carousel-container">
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>What we guarantee</h2>
@@ -121,7 +121,7 @@
               <div class="icon">
                 <img src="{{ asset('assets/frontend/img/abstract/abstract-3.png') }}" class="img-fluid">
               </div>
-              <h4><a href="">Networks</a></h4>
+              <h4><a href="">Network</a></h4>
               <p>Client will have access to our large and growing network making it easier to access funds for SME through our partners.</p>
             </div>
           </div>
@@ -158,7 +158,7 @@
 
           <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
-                <img src="{{ asset('assets/frontend/img/clients/client-2.png') }}" class="img-fluid">
+                <img src="{{ asset('assets/frontend/img/clients/client-11.png') }}" class="img-fluid">
             </div>
           </div>
 
@@ -198,24 +198,47 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-6">
+          <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
                 <img src="{{ asset('assets/frontend/img/clients/affiliation-2.png') }}" class="img-fluid">
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-6">
+          <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
                 <img src="{{ asset('assets/frontend/img/clients/client-9.png') }}" class="img-fluid">
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-4 col-6">
+          <div class="col-lg-3 col-md-4 col-6">
             <div class="client-logo">
                 <img src="{{ asset('assets/frontend/img/clients/client-10.png') }}" class="img-fluid">
             </div>
           </div>
 
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/client-12.png') }}" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/client-13.png') }}" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/client-14.png') }}" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 col-6">
+            <div class="client-logo">
+                <img src="{{ asset('assets/frontend/img/clients/client-15.png') }}" class="img-fluid">
+            </div>
+          </div>
         </div>
 
       </div>
@@ -275,7 +298,7 @@
     </section><!-- End Our Core Area of Specialisation Section -->
 
     <!-- ======= Affiliation Section ======= -->
-    <section id="clients" class="clients">
+    {{-- <section id="clients" class="clients">
         <div class="container" data-aos="fade-up">
 
           <div class="section-title">
@@ -284,11 +307,11 @@
 
           <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
 
-            {{-- <div class="col-lg-4 col-md-4 col-6">
+            <div class="col-lg-4 col-md-4 col-6">
               <div class="client-logo">
                 <img src="{{ asset('assets/frontend/img/clients/affiliation-1.png') }}" class="img-fluid">
               </div>
-            </div> --}}
+            </div>
 
             <div class="col-lg-12 col-md-4 col-6">
               <div class="client-logo">
@@ -296,15 +319,15 @@
               </div>
             </div>
 
-            {{-- <div class="col-lg-4 col-md-4 col-6">
+            <div class="col-lg-4 col-md-4 col-6">
               <div class="client-logo">
                   <img src="{{ asset('assets/frontend/img/clients/affiliation-3.png') }}" class="img-fluid">
               </div>
-            </div> --}}
+            </div>
           </div>
 
         </div>
-    </section><!-- End Affiliation Section -->
+    </section> --}}
 
     <section id="contact" class="services contact">
         <div class="container">

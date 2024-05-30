@@ -4,15 +4,16 @@
 
 <main id="main">
     <x-breadcrumb name="Start Your Business" />
+    <x-hero-section image="/assets/frontend/img/slide/slide-7.jpg" title="Start Your Business" sub-title="All you need to create a sustainable business structure!" />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
-            <div class="section-title">
+            {{-- <div class="section-title">
                 <h2>Start Your Business</h2>
-            </div>
+            </div> --}}
             <div class="container">
 
-                <h3 class="text-center">ALL YOU NEED TO CREATE A SUSTAINABLE BUSINESS STRUCTURE!</h3>
+                {{-- <h3 class="text-center">ALL YOU NEED TO CREATE A SUSTAINABLE BUSINESS STRUCTURE!</h3> --}}
 
                 <p>A plan without structure crumbles, so is a brand without core values, all these contribute to building a successful business. Sign up for our 5-day  SYB (Start Your Business)  to know more about this.</p>
 
@@ -40,7 +41,7 @@
                     <li>To assess your readiness for starting a business.</li>
                 </ol>
 
-                <h6>Duration</h6>
+                {{-- <h6>Duration</h6>
                 <ul>
                     <li>This training lasts for five days spread over two weeks. Training starts from February 1st - February 12th, 2021.</li>
                     <li>Start Your Business (SYB) is a manual for people who have a practical business idea and want to start a new business.</li>
@@ -49,7 +50,7 @@
                 </ul>
 
                 <h6>Amount</h6>
-                <p>₦45,000</p>
+                <p>₦45,000</p> --}}
 
                 <h6>For More Enquries!</h6>
                 <p>

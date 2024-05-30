@@ -4,15 +4,17 @@
 
 <main id="main">
     <x-breadcrumb name="Recruitment" />
+    <x-hero-section image="/assets/frontend/img/slide/slide-1.jpg" title="Recruitment" sub-title="Matching clients to the right employee" />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
-            <div class="section-title">
+            {{-- <div class="section-title">
                 <h2>Recruitment</h2>
-                <p>Matching clients to right employee</p>
-            </div>
+                <p>Matching clients to the right employee</p>
+            </div> --}}
             <div class="container">
-                <p>HT-Limited renders corporate personnel replacement services designed to bring job seekers to prospective employers by identifying their needs and locating the right personnel.</p>
+                <p>Our corporate personnel placement services bridge the gap between talented job seekers and their ideal employers, aiming for a perfect match. We take a personalized approach, getting to know our clients' businesses and specific needs. Then, we leverage our expertise and network to identify and recruit top candidates who align with their requirements. Our goal is to facilitate successful connections, foster long-term relationships, and drive business growth.</p>
+
                 <h5 class="mt-10">Challenge</h5>
                 <p>Recruiting staff is a very costly exercise. It is also an essential part of any business and it pays to do it properly. When organizations choose the right people for the job, train them well and treat them appropriately, these people not only produce good results but also tend to stay with the organization longer. In such circumstances, the organization’s initial and ongoing investment in them is well rewarded. An organization may have all of the latest technology and the best physical resources, but if it does not have the right people it will struggle to achieve the results it requires.</p>
             </div>

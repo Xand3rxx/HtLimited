@@ -4,13 +4,14 @@
 
 <main id="main">
     <x-breadcrumb name="Improve Your Business" />
+    <x-hero-section image="/assets/frontend/img/slide/slide-1.jpg" title="Improve Your Business" sub-title="Improve Your Business (IYB), using the globally renowned ILO methodology of experiential learning." />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
-            <div class="section-title">
+            {{-- <div class="section-title">
                 <h2>Improve Your Business</h2>
                 <p>Improve Your Business (IYB), using the globally renowned ILO methodology of experiential learning.</p>
-            </div>
+            </div> --}}
             <div class="container">
 
                 <h5 class="mt-10">What makes IYB unique and how does it benefit entrepreneurs?</h5>
@@ -27,12 +28,12 @@
 
                 </ul>
 
-                <h6>Training Details</h6>
+                {{-- <h6>Training Details</h6>
                 <ul>
                     <li><span class="font-weight-bold">Price:</span> ₦60,000</li>
                     <li><span class="font-weight-bold">Date:</span> April 12th – April 25th 2021</li>
                     <li><span class="font-weight-bold">Venue:</span> 23, Hawley Street, Lagos Island. Lagos – Nigeria.</li>
-                </ul>
+                </ul> --}}
 
                 <h6>For More Enquries!</h6>
                 <p>

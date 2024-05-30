@@ -4,13 +4,14 @@
 
 <main id="main">
     <x-breadcrumb name="Managing Your HR Functions" />
+    <x-hero-section image="/assets/frontend/img/slide/slide-7.jpg" title="HR Management" sub-title="Save time. Manage resources. Reduce compliance related risk" />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
-            <div class="section-title">
+            {{-- <div class="section-title">
                 <h2>HR Management</h2>
                 <p>Save time. Manage resources. Reduce compliance related risk</p>
-            </div>
+            </div> --}}
             <div class="container">
                 <p>HT-Limited provides the expertise and advice you need to help transform human resources management from an administrative burden into a strategic asset.</p>
                 <h5 class="mt-10">Manage HR functions</h5>

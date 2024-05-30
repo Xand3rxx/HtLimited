@@ -1,9 +1,9 @@
 @extends('layouts.frontend')
-@section('title', 'Access To Market')
+@section('title', 'Access To Finance')
 @section('content')
 
 <main id="main">
-    <x-breadcrumb name="Access To Market" />
+    <x-breadcrumb name="Access To Finance" />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
@@ -12,7 +12,9 @@
                 {{-- <p>Effectively Managing your Needs</p> --}}
             </div>
             <div class="container">
-                <p>We have a wide network of companies that can benefit from the purchase of the goods and services provided by our clients. We do not hesitate to provide these much-needed linkages.</p>
+                <p>HT Business Consulting provides access to finance through our affiliation with Bank of Industry, Access Bank PLC, and Sterling Bank PLC.</p>
+
+                <p>We advise our clients on the best loans to take and help them apply for grants.</p>
             </div>
         </div>
     </section>

@@ -38,9 +38,9 @@
         input.dt-button {
             font-size: inherit !important;
             color: #fff !important;
-            background-color: #30D5C8 !important;
+            background-color: #73c69b !important;
             background: linear-gradient(to bottom, rgb(48 213 200) 0%, rgb(48 213 200) 100%);
-            border-color: #30D5C8 !important;
+            border-color: #73c69b !important;
             display: inline-block !important;
             font-weight: 400 !important;
             text-align: center !important;
@@ -65,9 +65,9 @@
         a.dt-button:hover,
         input.dt-button:hover {
             color: #fff !important;
-            background-color: #30D5C8 !important;
+            background-color: #73c69b !important;
             background: linear-gradient(to bottom, rgb(48 213 200) 0%, rgb(48 213 200) 100%);
-            border-color: #30D5C8 !important;
+            border-color: #73c69b !important;
         }
 
         .position-top{

@@ -10,11 +10,12 @@
 </style>
 <main id="main">
     <x-breadcrumb name="Business Development Services" />
+    <x-hero-section image="/assets/frontend/img/slide/slide-1.jpg" title="Business Development Services" sub-title="" />
 
     <section id="features" class="features">
         <div class="container aos-init aos-animate" data-aos="fade-up">
             <div class="section-title">
-                <h2>Business Development Services</h2>
+                {{-- <h2>Business Development Services</h2> --}}
                 <p>The back bone of any economy especially one like Nigeria are the small businesses. But trying to build a business from scratch isn't an easy process, there are many challenges faced by SME and this challenges are more pronounced than ever during the initial growth of such business.</p>
             </div>
             <div class="container">
